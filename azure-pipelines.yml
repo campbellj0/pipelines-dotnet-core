@@ -10,6 +10,11 @@ pool:
   name: buildagent
 
 steps:
+
+- task: UseDotNet@2
+  inputs:
+    version: '6.x'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
